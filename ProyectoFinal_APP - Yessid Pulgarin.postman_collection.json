@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "c078e409-d4e4-4341-b8fc-23ddaea0ff55",
+		"name": "ProyectoFinal_APP - Yessid Pulgarin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23653586"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Login_Autenticacion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"usuario1\": \"yess\",\r\n  \"pass\": \"yess\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Registro Usuario",
+			"item": [
+				{
+					"name": "Listar Registro",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.reservapp.somee.com/api/RegistroUsuario/ListaRegistros",
+							"protocol": "http",
+							"host": [
+								"www",
+								"reservapp",
+								"somee",
+								"com"
+							],
+							"path": [
+								"api",
+								"RegistroUsuario",
+								"ListaRegistros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle Registro",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.reservapp.somee.com/api/RegistroUsuario/DetalleRegistro?id=1",
+							"protocol": "http",
+							"host": [
+								"www",
+								"reservapp",
+								"somee",
+								"com"
+							],
+							"path": [
+								"api",
+								"RegistroUsuario",
+								"DetalleRegistro"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"string\",\r\n  \"identificacion\": \"string\",\r\n  \"telefono\": \"string\",\r\n  \"correo\": \"string\",\r\n  \"edad\": \"string\",\r\n  \"pesoCorporal\": \"string\",\r\n  \"planEntreno\": \"string\",\r\n  \"usuario\": \"string\",\r\n  \"contrasena\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://www.reservapp.somee.com/api/RegistroUsuario/GuardarUsuario",
+							"protocol": "http",
+							"host": [
+								"www",
+								"reservapp",
+								"somee",
+								"com"
+							],
+							"path": [
+								"api",
+								"RegistroUsuario",
+								"GuardarUsuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reserva Usuario",
+			"item": [
+				{
+					"name": "Lista Reservas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.reservapp.somee.com/api/ReservaUsuario/ListaReservas",
+							"protocol": "http",
+							"host": [
+								"www",
+								"reservapp",
+								"somee",
+								"com"
+							],
+							"path": [
+								"api",
+								"ReservaUsuario",
+								"ListaReservas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservar Clase",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"string\",\r\n  \"identificacion\": \"string\",\r\n  \"reserva1\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://www.reservapp.somee.com/api/ReservaUsuario/GuardarClase",
+							"protocol": "http",
+							"host": [
+								"www",
+								"reservapp",
+								"somee",
+								"com"
+							],
+							"path": [
+								"api",
+								"ReservaUsuario",
+								"GuardarClase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar Reserva",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idUser\": 1,\r\n  \"nombre\": \"Yessid Pulgarin\",\r\n  \"identificacion\": \"1006321\",\r\n  \"reserva1\": \"N/A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://www.reservapp.somee.com/api/ReservaUsuario/ModificarReserva",
+							"protocol": "http",
+							"host": [
+								"www",
+								"reservapp",
+								"somee",
+								"com"
+							],
+							"path": [
+								"api",
+								"ReservaUsuario",
+								"ModificarReserva"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Reserva",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://www.reservapp.somee.com/api/ReservaUsuario/EliminarReserva?id=4",
+							"protocol": "http",
+							"host": [
+								"www",
+								"reservapp",
+								"somee",
+								"com"
+							],
+							"path": [
+								"api",
+								"ReservaUsuario",
+								"EliminarReserva"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
